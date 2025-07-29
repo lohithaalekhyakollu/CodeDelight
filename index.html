@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>IShip</title>
   <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/headfoot.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -108,7 +109,7 @@
             <div class="course-card js">
             <i class="fa-brands fa-js"></i>
             <h3>JavaScript</h3>
-            <p>Bring interactivity and life to your web projects.</p>
+            <p>Bring engaging interactivity and vibrant life to your web projects.</p>
             <a href="#">Start Learning</a>
             </div>
             <div class="course-card dsa">
@@ -120,44 +121,67 @@
         </div>
     </section>
     <section class="compiler-section">
-            <div class="compiler-wrapper">
-                <div class="compiler-video-box">
-                     <img src="../images/compiler.png" />
-                </div>
-                <div class="compiler-info-box">
-                    <h2 class="compiler-title">Online Compiler</h2>
-                    <p class="compiler-subtitle">Your Interactive Coding Playground</p>
-                    <ul class="compiler-features">
-                        <li>Code, test & debug instantly in any language.</li>
-                        <li>Build web apps with our HTML and React compilers.</li>
-                        <li>Optimize your code using AI-driven debugging.</li>
-                    </ul>
-                    <a href="#" class="compiler-btn">Explore Compiler</a>
-                </div>
-            </div>
-        </section>
-    <section class="reviews-section">
-        <h2 class="reviews-heading">What Our Learners Say</h2>
-        <div class="reviews-container">
-            <div class="review-card">
-            <p class="review-text">"This platform made coding fun and addictive. I never thought I'd enjoy learning compilers!"</p>
-            <div class="review-author">– Aryan S.</div>
-            <div class="review-rating">★★★★★</div>
-            </div>
-            <div class="review-card">
-            <p class="review-text">"Happy with the website,The gamified experience kept me engaged for hours. Highly recommend!"</p>
-            <div class="review-author">– Neha K.</div>
-            <div class="review-rating">★★★★☆</div>
-            </div>
-            <div class="review-card">
-            <p class="review-text">"Best UI and learning flow I’ve come across. The coins and rewards make it so motivating."</p>
-            <div class="review-author">– Dev R.</div>
-            <div class="review-rating">★★★★★</div>
-            </div>
+      <div class="compiler-wrapper">
+        <div class="compiler-video-box">
+          <img src="../images/compiler.png" />
         </div>
+        <div class="compiler-info-box">
+          <h2 class="compiler-title">Online Compiler</h2>
+          <p class="compiler-subtitle">Your Interactive Coding Playground</p>
+          <ul class="compiler-features">
+            <li>Code, test & debug instantly in any language.</li>
+            <li>Build web apps with our HTML and React compilers.</li>
+            <li>Optimize your code using AI-driven debugging.</li>
+          </ul>
+          <a href="#" class="compiler-btn">Explore Compiler</a>
+        </div>            
+      </div>
     </section>
+    <section class="reviews-section">
+    <h2 class="reviews-heading">What Our Learners Say</h2>
+    <div class="carousel-wrapper">
+      <button class="scroll-button left" onclick="scrollReviews(-1)" id="leftBtn">&#8249;</button>
+
+      <div class="reviews-viewport">
+        <div class="reviews-container" id="reviewsContainer">
+          <!-- 9 Equal-Length Sample Reviews -->
+          <div class="review-card">
+            <p class="review-text">"Challenges and quizzes helped me apply what I learned quickly. I enjoyedclarity of each lesson."</p>
+            <div class="review-author">– K. Lohitha Alekhya</div>
+            <div class="review-rating">★★★★★</div>
+          </div>
+          <div class="review-card">
+            <p class="review-text">"The modules are structured really well. Everything builds up smoothly, and the short format made it easy."</p>
+            <div class="review-author">– K. Sai Lakshmi Durga</div>
+            <div class="review-rating">★★★★☆</div>
+          </div>
+          <div class="review-card">
+            <p class="review-text">"I liked how visual the platform was. It helped me understand programming concepts that I used to find hard before."</p>
+            <div class="review-author">– G. Ashrita</div>
+            <div class="review-rating">★★★★★</div>
+          </div>
+          <div class="review-card">
+            <p class="review-text">"Fun, easy, and consistent. Every lesson felt rewarding and pushed me to stay on track without losing interest."</p>
+            <div class="review-author">– K. Kavya Santhoshi</div>
+            <div class="review-rating">★★★★★</div>
+          </div>
+          <div class="review-card">
+            <p class="review-text">"Clean interface and helpful feedback after each quiz. I improved my understanding and confidence over time."</p>
+            <div class="review-author">– K. Hema Durga</div>
+            <div class="review-rating">★★★★☆</div>
+          </div>
+          <div class="review-card">
+            <p class="review-text">"A fantastic platform that makes coding exciting. The balance of visuals, theory, and practice kept me engaged!"</p>
+            <div class="review-author">– R. Nikhila</div>
+            <div class="review-rating">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="scroll-button right" onclick="scrollReviews(1)" id="rightBtn">&#8250;</button>
+    </div>
+  </section>
   </main>
-  
   <footer>
     <div class="footer-container">
       <div class="footer-section">
@@ -199,5 +223,33 @@
       &copy; 2025 Code Delight. All rights reserved.
     </div>
   </footer>
+ <script>
+    const container = document.getElementById('reviewsContainer');
+    const leftBtn = document.getElementById('leftBtn');
+    const rightBtn = document.getElementById('rightBtn');
+    let currentScroll = 0;
+    function getCardWidth() {
+      const card = container.querySelector('.review-card');
+      const style = window.getComputedStyle(card);
+      const width = card.offsetWidth;
+      const marginRight = parseFloat(style.marginRight);
+      return width + marginRight;
+    }
+    function updateButtons() {
+      const maxScroll = container.scrollWidth - container.parentElement.offsetWidth;
+      leftBtn.disabled = currentScroll <= 0;
+      rightBtn.disabled = currentScroll >= maxScroll - 10;
+    }
+    function scrollReviews(direction) {
+      const scrollStep = getCardWidth();
+      currentScroll += direction * scrollStep;
+      const maxScroll = container.scrollWidth - container.parentElement.offsetWidth;
+      currentScroll = Math.max(0, Math.min(currentScroll, maxScroll));
+      container.style.transform = `translateX(-${currentScroll}px)`;
+      updateButtons();
+    }
+    window.addEventListener('resize', updateButtons);
+    window.addEventListener('load', updateButtons);
+  </script>
 </body>
 </html>
