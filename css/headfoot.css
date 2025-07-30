@@ -138,7 +138,7 @@ header {
 .menu_toggle {
   display: none;
 }
-@media (max-width: 1025px) {
+@media (max-width: 1395px) {
   .nav_bar,
   .search_bar,
   .action_bar {

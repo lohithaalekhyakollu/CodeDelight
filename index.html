@@ -223,33 +223,16 @@
       &copy; 2025 Code Delight. All rights reserved.
     </div>
   </footer>
- <script>
-    const container = document.getElementById('reviewsContainer');
-    const leftBtn = document.getElementById('leftBtn');
-    const rightBtn = document.getElementById('rightBtn');
-    let currentScroll = 0;
-    function getCardWidth() {
-      const card = container.querySelector('.review-card');
-      const style = window.getComputedStyle(card);
-      const width = card.offsetWidth;
-      const marginRight = parseFloat(style.marginRight);
-      return width + marginRight;
-    }
-    function updateButtons() {
-      const maxScroll = container.scrollWidth - container.parentElement.offsetWidth;
-      leftBtn.disabled = currentScroll <= 0;
-      rightBtn.disabled = currentScroll >= maxScroll - 10;
-    }
-    function scrollReviews(direction) {
-      const scrollStep = getCardWidth();
-      currentScroll += direction * scrollStep;
-      const maxScroll = container.scrollWidth - container.parentElement.offsetWidth;
-      currentScroll = Math.max(0, Math.min(currentScroll, maxScroll));
-      container.style.transform = `translateX(-${currentScroll}px)`;
-      updateButtons();
-    }
-    window.addEventListener('resize', updateButtons);
-    window.addEventListener('load', updateButtons);
-  </script>
+  <script>
+  function scrollReviews(direction) {
+    const container = document.getElementById("reviewsContainer");
+    const scrollAmount = 300;
+    container.scrollBy({ 
+      left: direction * scrollAmount, 
+      behavior: 'smooth' 
+    });
+  }
+</script>
+
 </body>
 </html>
