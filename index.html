@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IShip</title>
+  <link rel="stylesheet" href="../css/main.css" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="logo_container">
+      <a href="#"><img class="logo" src="../images/logo.png" alt="Logo"></a>
+    </div>
+    <div class="search_bar">
+      <span class="material-symbols-outlined search_icon">search</span>
+      <input id="searchInput" class="search_input" placeholder="Search for and more">
+    </div>
+    <nav class="nav_bar">
+      <a href="#" onclick="navigate('home')">Home</a>
+      <a href="#">Courses</a>
+      <a href="#">Compilers</a>
+      <a href="#">Fun Zone</a>
+    </nav>
+    <div class="action_bar">
+      <div class="action_container1">
+        <img src="../images/react_coin.png" alt="Coin" class="icon_coin">
+        <span class="action_name1">0</span>
+      </div>
+      <div class="action_container">
+        <i class="fa-solid fa-circle-user fa-xl" style="color: white;"></i>
+        <span class="action_name">Sign In / Sign Up</span>
+      </div>
+    </div>
+    <div class="menu_toggle">
+      <div class="parent" style="position: relative;">
+        <span class="material-symbols-outlined">menu</span>
+        <div class="mobile_nav" style="position: absolute;">
+          <div>Home</div>
+          <div>Courses</div>
+          <div>Compilers</div>
+          <div>Fun Zone</div>
+          <div>Sign In</div>
+          <div>Sign Up</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="left">
+        <h1 class="hero-headline">
+          Learn to code, play to win.
+        </h1>
+        <p class="hero-subheadline">
+          Master compilers, complete real coding courses, collect coins, and unlock levels in the most addictive way to learn programming.
+        </p>
+        <a href="#courses" class="hero-btn">Start Learning</a>
+      </div>
+      <div class="right">
+        <img src="../images/hero.png" alt="Hero Image">
+      </div>
+    </section>
+    <section class="features-section">
+        <h2 class="features-heading">Why Choose Code Delight?</h2>
+        <div class="features-container">
+            <div class="feature-box">
+            <i class="fa-solid fa-gamepad"></i>
+            <h3>Gamified Learning</h3>
+            <p>Earn coins, badges, and unlock levels while learning to code.</p>
+            </div>
+            <div class="feature-box">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3>Interactive Practice</h3>
+            <p>Use real-time compilers to practice and submit your code live.</p>
+            </div>
+            <div class="feature-box">
+            <i class="fa-solid fa-award"></i>
+            <h3>Certified Courses</h3>
+            <p>Get certified upon completing skill-based and project-driven courses.</p>
+            </div>
+            <div class="feature-box">
+            <i class="fa-solid fa-users"></i>
+            <h3>Community Support</h3>
+            <p>Engage with peers, mentors, and participate in coding challenges.</p>
+            </div>
+        </div>
+    </section>
+    <section class="courses-section">
+        <h2 class="courses-heading">Explore Our Courses</h2>
+        <div class="courses-container">
+            <div class="course-card html">
+            <i class="fa-brands fa-html5"></i>
+            <h3>HTML</h3>
+            <p>Structure the web with semantic and accessible markup.</p>
+            <a href="#">Start Learning</a>
+            </div>
+            <div class="course-card css">
+            <i class="fa-brands fa-css3-alt"></i>
+            <h3>CSS</h3>
+            <p>Style beautiful websites with powerful layouts and animations.</p>
+            <a href="#">Start Learning</a>
+            </div>
+            <div class="course-card js">
+            <i class="fa-brands fa-js"></i>
+            <h3>JavaScript</h3>
+            <p>Bring interactivity and life to your web projects.</p>
+            <a href="#">Start Learning</a>
+            </div>
+            <div class="course-card dsa">
+            <i class="fa-solid fa-database"></i>
+            <h3>DSA</h3>
+            <p>Master Data Structures and Algorithms for coding interviews.</p>
+            <a href="#">Start Learning</a>
+            </div>
+        </div>
+    </section>
+    <section class="compiler-section">
+            <div class="compiler-wrapper">
+                <div class="compiler-video-box">
+                     <img src="../images/compiler.png" />
+                </div>
+                <div class="compiler-info-box">
+                    <h2 class="compiler-title">Online Compiler</h2>
+                    <p class="compiler-subtitle">Your Interactive Coding Playground</p>
+                    <ul class="compiler-features">
+                        <li>Code, test & debug instantly in any language.</li>
+                        <li>Build web apps with our HTML and React compilers.</li>
+                        <li>Optimize your code using AI-driven debugging.</li>
+                    </ul>
+                    <a href="#" class="compiler-btn">Explore Compiler</a>
+                </div>
+            </div>
+        </section>
+    <section class="reviews-section">
+        <h2 class="reviews-heading">What Our Learners Say</h2>
+        <div class="reviews-container">
+            <div class="review-card">
+            <p class="review-text">"This platform made coding fun and addictive. I never thought I'd enjoy learning compilers!"</p>
+            <div class="review-author">– Aryan S.</div>
+            <div class="review-rating">★★★★★</div>
+            </div>
+            <div class="review-card">
+            <p class="review-text">"Happy with the website,The gamified experience kept me engaged for hours. Highly recommend!"</p>
+            <div class="review-author">– Neha K.</div>
+            <div class="review-rating">★★★★☆</div>
+            </div>
+            <div class="review-card">
+            <p class="review-text">"Best UI and learning flow I’ve come across. The coins and rewards make it so motivating."</p>
+            <div class="review-author">– Dev R.</div>
+            <div class="review-rating">★★★★★</div>
+            </div>
+        </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <div class="footer-logo">Code Delight</div>
+        <p>Learn. Play. Code. A fun way to become a coding pro!</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <span style="display: flex;flex-direction: row
+        ; gap: 1rem;">
+          <a href="#">Home</a>
+          <a href="#">Courses</a>
+          <a href="#">Compilers</a>
+          <a href="#">Funzone</a>
+          <a href="#">Profile</a>
+        </span>
+        <div style="margin-top: 1rem;">
+          <h4>Follow Us</h4>
+          <div style="display: flex; gap: 1rem; margin-top: 0.5rem; align-content: center; justify-content: center;">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook" style="color: #ccc;">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram" style="color: #ccc;">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://google.com" target="_blank" aria-label="Google" style="color: #ccc;">
+              <i class="fab fa-google fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: support@codedelight.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Code Delight. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
