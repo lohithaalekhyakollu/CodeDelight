@@ -1,10 +1,13 @@
 function toggleSubmenu(clickedItem) {
   const submenu = clickedItem.nextElementSibling;
-  const arrow = clickedItem.querySelector(".arrow");
+  const arrowIcon = clickedItem.querySelector(".arrow i");
 
   const isVisible = submenu.style.display === "block";
   submenu.style.display = isVisible ? "none" : "block";
-  arrow.textContent = isVisible ? "▼" : "▲";
+  if (arrowIcon) {
+    arrowIcon.classList.toggle("fa-chevron-up", !isVisible);
+    arrowIcon.classList.toggle("fa-chevron-down", isVisible);
+  }
 }
 document.addEventListener('DOMContentLoaded', function() {
     setupEditor('editor-introduction', 'preview-introduction');
@@ -27,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
     setupEditor('editor-bloc','preview-bloc');
     setupEditor('editor-inli','preview-inli');
     setupEditor('editor-headings','preview-headings');
-    setupEditor('editor-headings','preview-headings');
     setupEditor('editor-format','preview-format');
     setupEditor('editor-hyper','preview-hyper');
     setupEditor('editor-li_ex','preview-li_ex');
@@ -39,39 +41,20 @@ document.addEventListener('DOMContentLoaded', function() {
     setupEditor('editor-ifr1', 'preview-ifr1');
     setupEditor('editor-ifr2', 'preview-ifr2');
     setupEditor('editor-ifr3', 'preview-ifr3');
-     setupEditor('editor-forms', 'preview-forms');
-      setupEditor('editor-parag', 'preview-parag');
-       setupEditor('editor-break', 'preview-break');
-    // --- Show the first content section by default ---
+    setupEditor('editor-forms', 'preview-forms');
+    setupEditor('editor-parag', 'preview-parag');
+    setupEditor('editor-break', 'preview-break');
+    setupEditor('editor-audi','preview-audi');
     showContent('introduction');
 });
-
-// --- Function to toggle sidebar submenus ---
-// function toggleSubmenu(clickedItem) {
-//     const submenu = clickedItem.querySelector(".submenu");
-//     const arrow = clickedItem.querySelector(".arrow");
-
-//     if (submenu.style.display === "block") {
-//         submenu.style.display = "none";
-//         arrow.style.transform = "rotate(0deg)";
-//     } else {
-//         submenu.style.display = "block";
-//         arrow.style.transform = "rotate(180deg)";
-//     }
-// }
-
-// --- Function to show a content section and hide others ---
 function showContent(contentId) {
     const contentSections = document.querySelectorAll('.content-section');
     contentSections.forEach(section => {
         section.style.display = 'none';
     });
-
     const selectedContent = document.getElementById(contentId);
     if (selectedContent) {
         selectedContent.style.display = 'block';
-        // Refresh CodeMirror instances inside the visible section
-        // This fixes a bug where the editor is invisible until clicked
         const editors = selectedContent.querySelectorAll('.CodeMirror');
         editors.forEach(editorNode => {
             if (editorNode.CodeMirror) {
@@ -80,27 +63,16 @@ function showContent(contentId) {
         });
     }
 }
-
-// --- Function to initialize a CodeMirror editor and link it to a preview iframe ---
+showContent('tasks');
 function setupEditor(editorId, previewId) {
     const editorTextarea = document.getElementById(editorId);
     const previewFrame = document.getElementById(previewId);
-    // const storageKey = `saved-${editorId}`;
-    if (editorTextarea.classList.contains('cm-initialized')) return;
-
-
     const editor = CodeMirror.fromTextArea(editorTextarea, {
         lineNumbers: true,
         mode: 'htmlmixed',
         theme: 'material-darker',
         lineWrapping: true,
-        viewportMargin: Infinity,
     });
-    // const savedContent = localStorage.getItem(storageKey);
-    // if (savedContent) {
-    //     editor.setValue(savedContent);
-    // }
-    editorTextarea.classList.add('cm-initialized');
     function syncEditorHeight() {
     const lineCount = editor.lineCount();
     const lineHeight = 17;
@@ -109,10 +81,7 @@ function setupEditor(editorId, previewId) {
 
     editor.getWrapperElement().style.height = newHeight + 'px';
   }
-  
     function updatePreview() {
-        // const code = editor.getValue();
-        // localStorage.setItem(storageKey, code);
         const previewDoc = previewFrame.contentDocument || previewFrame.contentWindow.document;
         previewDoc.open();
         const baseStyles = `
@@ -131,10 +100,8 @@ function setupEditor(editorId, previewId) {
             previewFrame.style.height = (contentHeight + 20) + 'px';
         }, 100);
     }
-    
     updatePreview();         
     syncEditorHeight();  
-
     editor.on('change', () => {
     updatePreview();      
     syncEditorHeight();     
