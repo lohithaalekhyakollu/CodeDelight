@@ -76,43 +76,43 @@ levelData.forEach((level, index) => {
   grid.appendChild(card);
 });
 
-// Reset progress button handler
+
 document.getElementById("reset-btn").addEventListener("click", () => {
   if (confirm("Are you sure you want to reset your progress?")) {
     localStorage.removeItem("stars");
     localStorage.setItem("unlockedLevel", "1");
-    localStorage.setItem("coins", "0");  // reset coins too
+    localStorage.setItem("coins", "0");  
     location.reload();
   }
 });
 
-// Back button handler
+
 document.getElementById("back-btn").addEventListener("click", () => {
   window.history.back();
 });
 
-// Function to be called by quiz pages on completion
+
 function completeLevel(levelNum, starsEarned) {
-  // Store stars, only update if higher than existing
+  
   const starData = JSON.parse(localStorage.getItem("stars") || "{}");
   if (!starData[levelNum] || starData[levelNum] < starsEarned) {
     starData[levelNum] = starsEarned;
     localStorage.setItem("stars", JSON.stringify(starData));
   }
 
-  // Unlock next level if at least 1 star earned
+  
   const currentUnlocked = parseInt(localStorage.getItem("unlockedLevel")) || 1;
   if (starsEarned >= 1 && levelNum + 1 > currentUnlocked) {
     localStorage.setItem("unlockedLevel", levelNum + 1);
   }
 
-  // Add coins for stars earned (e.g. 5 coins per star)
+  
   if (starsEarned > 0) {
     let coins = parseInt(localStorage.getItem("coins")) || 0;
     coins += starsEarned * 10;
     localStorage.setItem("coins", coins.toString());
 
-    // Update displayed coin count if on levels page
+    
     const coinCountElem = document.getElementById("coin-count");
     if (coinCountElem) {
       coinCountElem.textContent = coins;
@@ -128,7 +128,7 @@ function completeLevel(levelNum, starsEarned) {
 
   function completeLevel(levelNum, starsEarned) {
       let coins = parseInt(localStorage.getItem("coins")) || 0;
-      coins += starsEarned * 10; // or 5, if you prefer
+      coins += starsEarned * 10; 
       localStorage.setItem("coins", coins.toString());
   }
 }
