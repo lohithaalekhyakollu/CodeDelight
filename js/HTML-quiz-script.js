@@ -106,5 +106,5 @@ function completeLevel(levelNum, starsEarned) {
   }
 }
 
-// Start loading the quiz when HTML is ready
+
 window.addEventListener("DOMContentLoaded", loadQuestion);
