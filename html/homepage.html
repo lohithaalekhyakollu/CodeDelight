@@ -12,44 +12,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <div class="logo_container">
-      <a href="#"><img class="logo" src="../images/logo.png" alt="Logo"></a>
+ <header>
+  <div class="logo_container">
+    <a href="#"><img class="logo" src="../images/logo.png" alt="Logo"></a>
+  </div>
+  <div class="search_bar">
+    <span class="material-symbols-outlined search_icon">search</span>
+    <input id="searchInput" class="search_input" placeholder="Search for and more">
+  </div>
+  <nav class="nav_bar">
+    <a href="index.html" onclick="navigate('home')">Home</a>
+    <a href="../html/courses.html">Courses</a>
+    <a href="../html/compilers.html">Compilers</a>
+    <a href="../html/funzone.html">Fun Zone</a>
+  </nav>
+  <div class="action_bar">
+    <div class="action_container1">
+      <img src="../images/react_coin.png" alt="Coin" class="icon_coin">
+      <span class="action_name1">0</span>
     </div>
-    <div class="search_bar">
-      <span class="material-symbols-outlined search_icon">search</span>
-      <input id="searchInput" class="search_input" placeholder="Search for and more">
+    <div class="action_container">
+      <i class="fa-solid fa-circle-user fa-xl" style="color: white;"></i>
+      <a href="../html/profile.html" style="color: white; text-decoration: none; font-weight: 500; margin-left: 10px;">Lakshan</a>
     </div>
-    <nav class="nav_bar">
-      <a href="index.html" onclick="navigate('home')">Home</a>
-      <a href="../html/courses.html">Courses</a>
-      <a href="../html/compilers.html">Compilers</a>
-      <a href="../html/funzone.html">Fun Zone</a>
-    </nav>
-    <div class="action_bar">
-      <div class="action_container1">
-        <img src="../images/react_coin.png" alt="Coin" class="icon_coin">
-        <span class="action_name1">0</span>
+  </div>
+  <div class="menu_toggle">
+    <div class="parent" style="position: relative;">
+      <span class="material-symbols-outlined">menu</span>
+      <div class="mobile_nav" style="position: absolute;">
+        <div style="color: #aaa;">User: Lakshan</div>
+        <div data-link="../html/profile.html">Dashboard</div>
+        <div data-link="index.html">Home</div>
+        <div data-link="../html/courses.html">Courses</div>
+        <div data-link="../html/compilers.html">Compilers</div>
+        <div data-link="../html/funzone.html">Fun Zone</div>
       </div>
-      <div class="action_container">
-        <i class="fa-solid fa-circle-user fa-xl" style="color: white;"></i>
-        <span class="action_name"><a href="../html/signin.html" style="color: white; text-decoration: none; font-weight: 500;">Login</a></span>
-      </div>
     </div>
-    <div class="menu_toggle">
-      <div class="parent" style="position: relative;">
-        <span class="material-symbols-outlined">menu</span>
-        <div class="mobile_nav" style="position: absolute;">
-          <div data-link="index.html">Home</div>
-          <div data-link="../html/courses.html">Courses</div>
-          <div data-link="../html/compilers.html">Compilers</div>
-          <div data-link="../html/funzone.html">Fun Zone</div>
-          <div data-link="../html/signin.html">Sign In</div>
-          <div data-link="../html/signup.html">Sign Up</div>
-        </div>
-      </div>
-    </div>
-  </header>
+  </div>
+</header>
+
   <main>
     <section class="hero">
       <div class="left">
