@@ -19,18 +19,18 @@
             <h2>Course Content</h2>
              <div class="line"></div>
         <ul class="nav-links">
-            <li onclick="toggleSubmenu(this)" class="diff">
+            <li onclick="showContent('introduction')" class="diff">
              Introduction to HTML
             </li>
             <li onclick="toggleSubmenu(this)" class="diff">
-            HTML Basics<span class="arrow">▼</span>
+            HTML Basics<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
             </li>
             <ul class="submenu" onclick="Close()">
             <a href="#" onclick="showContent('basics')"><li>HTML Basics</li></a>
             <a href="#" onclick="showContent('editors')"><li>HTML Editors</li></a>
           </ul>
            <li onclick="toggleSubmenu(this)" class="diff">
-            Structure and Elements<span class="arrow">▼</span>
+            Structure and Elements<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
             </li>
             <ul class="submenu" onclick="Close()">
             <a href="#" onclick="showContent('elements')"><li>HTML Elements</li></a>
@@ -38,7 +38,7 @@
             <a href="#" onclick="showContent('block_inline')"><li>Block vs. Inline</li></a>
           </ul>
            <li onclick="toggleSubmenu(this)" class="diff">
-            Headings & Paragraphs<span class="arrow">▼</span>
+            Headings & Paragraphs<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
             </li>
             <ul class="submenu" onclick="Close()">
             <a href="#" onclick="showContent('headings')"><li>Headings</li></a>
@@ -46,7 +46,7 @@
             <a href="#" onclick="showContent('format')"><li>Text Formatting</li></a>
           </ul>
           <li onclick="toggleSubmenu(this)" class="diff">
-            Lists<span class="arrow">▼</span>
+            Lists<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
             </li>
             <ul class="submenu" onclick="Close()">
             <!-- <a href="#" onclick="showContent('hyper')"><li>Hyperlinks</li></a> -->
@@ -55,33 +55,52 @@
              <a href="#" onclick="showContent('types')"><li>Types of Lists</li></a>
           </ul>
            <li onclick="toggleSubmenu(this)" class="diff">
-           Visuals and Media<span class="arrow">▼</span>
+           Visuals and Media<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
             </li>
             <ul class="submenu" onclick="Close()">
             <a href="#" onclick="showContent('hyper')"><li>Hyperlinks</li></a>
-            <a href="#" onclick="showContent('vi')"><li>video & Audio</li></a>
+            <a href="#" onclick="showContent('au_vi')"><li>video & Audio</li></a>
           </ul>
           <li onclick="toggleSubmenu(this)" class="diff">
-            Iframes and Forms<span class="arrow">▼</span>
+            Iframes and Forms<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
             </li>
             <ul class="submenu" onclick="Close()">
             <a href="#" onclick="showContent('ifram')"><li>Iframes</li></a>
             <a href="#" onclick="showContent('forms')"><li>Forms</li></a>
-            <!-- <a href="#"><li>Form Inputs</li></a> -->
           </ul>
+            <!-- <a href="sample.html"><li style="border-bottom:3px solid #00f2fe ;" class="diff">
+             Check Your Knowledge
+            </li>
+            </a> -->
+           <!-- <a href="#" onclick="showContent('tasks')"><li style="border-bottom:3px solid #00f2fe ;" class="diff">
+            Tasks
+            </li>
+            </a> -->
+            <li onclick="showContent('tasks')" class="diff">
+            Tasks
+            </li>
+            <a href="../html/Html-levels.html"><li style="border-bottom:3px solid #00f2fe ;" class="diff">
+             Check Your Knowledge
+            </li></a>
+            <!-- <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('tasks')"><li>Task1</li></a>
+            <a href="#" onclick="showContent('forms')"><li>Forms</li></a>
+          </ul> -->
          </ul>
         </div>
         <div class="main">
         <div class="header">
          <div class="heading">
                 <div class="menu" onclick="Open()"><i class="fa-solid fa-bars"></i></div>
-                <h1>Learn With Courage</h1>
-                <h2>Work With Passion</h2>
+                <h1>Learn HTML the Right Way</h1>
+                <h2>Your Journey Into Web Development Starts Here</h2>
+                <!-- <a href="#"><input type="button" value="Back to Home"></a> -->
+                <input type="button" value="Back to Home" onclick="history.back()">
          </div>
          </div>
           <div id="introduction" class="content-section">
                    <h1>HTML Introduction</h1>
-                   <p>HTML stands for Hyper Text Markup Language, which is the core language used to structure content on the web. 
+                   <p>HTML stands for <b>Hyper Text Markup Language,</b> which is the core language used to structure content on the web. 
                     It organizes text, images, links, and media using tags and elements that browsers can interpret. 
                     As of 2025, over 95% of websites rely on HTML alongside CSS and JavaScript, making it a fundamental tool in modern web development.</p>
                     <ul>
@@ -110,21 +129,150 @@
                upon which all web pages are created.</p>
                <center><img src="../images/page_struct.png"/></center>
                <ul>
-                <li><!DOCTYPE html> - This is the document type declaration, not a tag. 
+                <li>&lt;!DOCTYPE html&gt; - This is the document type declaration, not a tag. 
                   It declares that the document is an HTML5 document.</li>
+                <li>&lt;html&gt; - This is called the HTML root element. 
+                  All other elements are contained within it.</li>
+                  <li>&lt;head&gt; - The head tag contains the "behind the scenes" elements for a webpage. Elements within the head aren't visible on the front end of a webpage. 
+                   </li>
+                    <li>Typical elements inside the &lt;head&gt; include:</li>
+                  <ul>
+                    <li>&lt;title&gt;: Defines the title displayed on the browser tab.</li>
+                    <li>&lt;meta&gt;: Provides information like the character set or viewport settings.</li>
+                    <li>&lt;link&gt;: Links external stylesheets or resources.</li>
+                    <li>&lt;style&gt;: Embeds internal CSS styles.</li>
+                    <li>&lt;script&gt;: Embeds JavaScript for functionality.</li>
+                  </ul>
+                  <li>&lt;title&gt; - The title is what is displayed on the top of your browser when you visit a website and contains 
+                    the title of the webpage that you are viewing.</li>
+                  <li>&lt;h2&gt; - The &lt;h2&gt; tag is a second-level heading tag.</li>
+                  <li>&lt;p&gt; - The &lt;p&gt; tag represents a paragraph of text.</li>
+                  <li>&lt;body&gt; - The body tag is used to enclose all the visible content of a webpage.
+                     In other words, the body content is what the browser will show on the front end.</li>
                </ul>
+               <p>An HTML document can be created using an HTML text editor. 
+                Save the text file using the ".html" or ".htm" extension. Once saved as an HTML document, 
+                the file can be opened as a webpage in the browser.</p>
+              <h1>HTML Elements and HTML Tag</h1>
+              <p>HTML Elements and HTML Tags are related but distinct. An HTML element is the 
+                complete structure, including the opening tag, content 
+                (if any), and the closing tag (if applicable).</p>
+              <p>On the other hand, A tag is the actual keyword or name enclosed in angle brackets (&lt; &gt;) that tells 
+                the browser what kind of content to expect.</p>
+              <center><img src="../images/element.png"/></center>
+          <div class="scroll-wrapper">
+              <table border="1" >
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&lt;html&gt;</td>
+      <td>The root element of an HTML document</td>
+    </tr>
+    <tr>
+      <td>&lt;head&gt;</td>
+      <td>Contains meta-information about the webpage</td>
+    </tr>
+    <tr>
+      <td>&lt;body&gt;</td>
+      <td>Contains the visible content of the webpage</td>
+    </tr>
+    <tr>
+      <td>&lt;h1&gt; to &lt;h6&gt;</td>
+      <td>Headings of various levels (h1 being the largest)</td>
+    </tr>
+    <tr>
+      <td>&lt;p&gt;</td>
+      <td>Defines a paragraph</td>
+    </tr>
+    <tr>
+      <td>&lt;a&gt;</td>
+      <td>Defines a hyperlink</td>
+    </tr>
+    <tr>
+      <td>&lt;img&gt;</td>
+      <td>Embed an image</td>
+    </tr>
+    <tr>
+      <td>&lt;ul&gt;</td>
+      <td>Defines an unordered list</td>
+    </tr>
+    <tr>
+      <td>&lt;ol&gt;</td>
+      <td>Defines an ordered list</td>
+    </tr>
+    <tr>
+      <td>&lt;li&gt;</td>
+      <td>Defines a list item</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2>Web Browser</h2>
+<p>Unlike other programming languages, HTML does not show output on the any compiler.
+   Web browsers is an compiler
+   which show the results of an your HTML code.</p>
+   <p>It reads HTML files and determines how to show content with the help of HTML tags. 
+    Any web browser (Google, Safari, Mozilla Firefox, etc) can be used to open a .
+     HTML file and view the results.</p>
+     <center><img src="../images/web_browse.png"/></center>
+     <h2>Why Learn HTML?</h2>
+     <p>Here are 5 common reasons to learn HTML:</p>
+     <ol>
+      <li><b>Build Websites:</b> HTML is the basic building block for creating any website. Learning HTML can 
+        help you pursue a career in web development.</li>
+      <li><b>Customize Content:</b> Allows you to edit or tweak web pages, 
+        emails, or templates to fit your needs.</li>
+      <li><b>Understand how the web works:</b> This helps you grasp how the internet works
+         and how web pages are structured.</li>
+      <li><b>Employment Opportunities:</b> According to the Bureau of Labor Statistics, projects that employment 
+        for web developers will grow 16% between 2022 and 2032, which is much 
+        faster than the average across all occupations.</li>
+      <li><b>Learn Easily:</b> HTML is beginner-friendly, making it a great first step into the world of coding and technology.</li>
+     </ol>
+     <h2>Applications of HTML</h2>
+     <ul>
+      <li><b>Web Development:</b> HTML is the backbone of every webpage. It structures the content and integrates multimedia, hyperlinks, and more.</li>
+      <li><b>Web Applications:</b> HTML, in combination with CSS and JavaScript, powers complex web applications (e.g., Google Docs, Trello).</li>
+      <li><b>Emails:</b> HTML emails use table-based layouts and embedded media to deliver rich, interactive content.</li>
+      <li><b>Mobile App Development:</b> HTML5 is used with frameworks like PhoneGap to build mobile apps for iOS and Android.</li>
+     </ul>
+     <h2>Limitations of HTML</h2>
+     <ul>
+      <li><b>No Logic or Functionality:</b> HTML cannot handle complex logic, interactivity, or dynamic content on its own. 
+        It requires JavaScript for such tasks.</li>
+      <li><b>SEO Limitations:</b> While HTML provides structure, it’s not enough by itself for search engine 
+        optimization (SEO). Proper metadata and content structuring, 
+        as well as external SEO practices, are necessary.</li>
+      <li><b>Limited Styles:</b> While HTML can handle basic styles via the style attribute, it is typically complemented by CSS for complex styling and layout.</li>
+     </ul>
               <div class="nav-buttons">
-                 <!-- <button>Previous</button> -->
-                  <!-- <button >Next &gt;</button> -->
                     <a href="#" onclick="showContent('basics')"><button >Next &gt;</button></a>
               </div>
            </div>
+           <!-- <div id="tasks" class="content-section">
+            <iframe src="../images/task1.pdf"></iframe>
+           </div> -->
+           <div id="tasks" class="content-section">
+          <h1>HTML Tasks</h1>
+          <div class="tasks-container">
+            <a href="your-task1.pdf" target="_blank"><div class="task-item">Task 1</div></a>
+            <div class="task-item">Task 2</div>
+            <div class="task-item">Task 3</div>
+            <div class="task-item">Task 4</div>
+            <div class="task-item">Task 5</div>
+          </div>
+          <div class="nav-buttons">
+            <a href="#"><button>🏁 End of Module</button></a>
+          </div>
+          </div>
            <div id="basics" class="content-section">
             <h1>HTML Basics</h1>
             <p>HTML (HyperText Markup Language) is the standard markup language used to create and structure web pages.</p>
-            <!-- <p>The document outline in HTML defines the structure of the page from top to bottom. 
-               It follows a tree-like hierarchy that the browser and search engines understand. 
-               The main sections include the doctype declaration, html root, and two key sections: head and body.</p> -->
             <ul>
                 <li>It defines the layout of a webpage using elements and tags, allowing for the display of text, images, links, and multimedia content.</li>
                 <li>As the foundation of nearly all websites, HTML is used in over 95% of all web pages today, making it an essential part of modern web development.</li>
@@ -152,6 +300,7 @@
   &lt;/head&gt;
   &lt;body&gt;
     &lt;h1&gt;Welcome&lt;/h1&gt;
+    &lt;!-- Enter to run the code --&gt;
   &lt;/body&gt;
 &lt;/html&gt;
             </textarea>
@@ -322,9 +471,7 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
                 The more you practice and experiment with HTML, 
                 the better you'll understand how to create interactive, engaging, and well-optimized websites.</p>
               <div class="nav-buttons">
-                 <!-- <button>Previous</button> -->
                    <a href="#" onclick="showContent('introduction')"><button >Previous</button></a>
-                  <!-- <button >Next &gt;</button> -->
                     <a href="#" onclick="showContent('editors')"><button >Next &gt;</button></a>
               </div>
            </div>
@@ -462,7 +609,6 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
                 there’s an HTML editor out there that’s perfect for you.</p>
                 <div class="nav-buttons">
                   <a href="#" onclick="showContent('basics')"><button>Previous</button></a>
-                  <!-- <button >Next &gt;</button> -->
                     <a href="#" onclick="showContent('elements')"><button >Next &gt;</button></a>
               </div>
            </div>
@@ -564,7 +710,8 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
              <h2>Block-Level Elements and Inline Elements</h2>
              <p>In HTML, elements are broadly categorized into two main types based on how they display in the document layout: 
               block-level elements and inline elements.</p>
-              <p><b>1. Block-Level Elements -</b>Block-level elements typically start on a new line and take up the full width available to them, regardless of their actual content width. This means they stack vertically and can contain other block-level elements as well as inline elements. 
+              <p><b>1. Block-Level Elements</b></p>
+              <p>Block-level elements typically start on a new line and take up the full width available to them, regardless of their actual content width. This means they stack vertically and can contain other block-level elements as well as inline elements. 
                 Here are some examples of block-level elements:</p>
               <p><b>Examples:</b></p>
               <ul>
@@ -577,11 +724,12 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
                 <li>&lt;section&gt;, &lt;article&gt;, &lt;nav&gt;, &lt;aside&gt;, &lt;header&gt;, &lt;footer&gt;: Semantic elements 
                   that define areas of a webpage.</li>
               </ul>
-              <p><b>2. Inline Elements -</b>Inline elements do not start on a new line; they appear 
+              <p><b>2. Inline Elements</b></p>
+              <p>Inline elements do not start on a new line; they appear 
                 on the same line as adjacent content, as long as there is space. They only take up as much width as their content requires.
                  Inline elements are typically used within block-level elements to add content or style.
                 Here are some examples of inline elements:</p>
-                <h3>Examples:</h3>
+                <p><b>Examples:</b></h3>
                 <ul>
                   <li>&lt;span&gt;: A general-purpose inline container for phrasing content.</li>
                   <li>&lt;a&gt;: Creates hyperlinks.</li>
@@ -916,7 +1064,7 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
                 </div>
            </div>
       <div id="headings" class="content-section">
-        <h2>HTML Headings</h2>
+        <h1>HTML Headings</h1>
         <p>
           <b>HTML headings</b> are used to define the titles and subtitles of sections on a webpage. 
           They help organize 
@@ -997,9 +1145,7 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
                     heading tags for emphasis or styling alone.</li>
               </ul>
                <div class="nav-buttons">
-                 <!-- <button>Previous</button> -->
                    <a href="#" onclick="showContent('block_inline')"><button >Previous</button></a>
-                  <!-- <button >Next &gt;</button> -->
                     <a href="#" onclick="showContent('parag')"><button >Next &gt;</button></a>
               </div>
       </div>
@@ -1077,9 +1223,7 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
              use appropriate tags like &lt;img&gt; , &lt;table&gt;or &lt;div&gt;.</li>
         </ol>
          <div class="nav-buttons">
-                 <!-- <button>Previous</button> -->
                    <a href="#" onclick="showContent('headings')"><button >Previous</button></a>
-                  <!-- <button >Next &gt;</button> -->
                     <a href="#" onclick="showContent('format')"><button >Next &gt;</button></a>
               </div>
       </div>
@@ -1162,9 +1306,7 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
             <h3>Output Preview</h3>
              <iframe id="preview-format" class="output-box" scrolling="no"></iframe>
               <div class="nav-buttons">
-                 <!-- <button>Previous</button> -->
                    <a href="#" onclick="showContent('parag')"><button >Previous</button></a>
-                  <!-- <button >Next &gt;</button> -->
                     <a href="#" onclick="showContent('lists')"><button >Next &gt;</button></a>
               </div>
       </div>
@@ -1295,10 +1437,95 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
 </table>
 </div>
  <div class="nav-buttons">
-                 <!-- <button>Previous</button> -->
                    <a href="#" onclick="showContent('types')"><button >Previous</button></a>
-                  <!-- <button >Next &gt;</button> -->
-                    <a href="#" onclick="showContent('vi')"><button >Next &gt;</button></a>
+                    <a href="#" onclick="showContent('au_vi')"><button >Next &gt;</button></a>
+              </div>
+</div>
+<div id="au_vi" class="content-section">
+<h1>HTML Video</h1>
+<p>The &lt;video&gt; element in HTML is used to show video content on web pages. It supports various video formats, including MP4, WebM, and Ogg. 
+  It is introduced in HTML5.</p>
+<p>Scroll down to the End, there is a Tutorial Video which is a live example of the Video Element 
+  displaying on this webpage.</p>
+<h3>Syntax:</h3>
+<div class="syntax">
+  &lt;video src=&quot; &quot; controls&gt;&lt;/video&gt;
+
+&lt;!-- OR --&gt;
+
+&lt;video controls=&quot;controls&quot;&gt;
+  &lt;source src=&quot;video_filename&quot; type=&quot;video_type&quot;&gt;
+&lt;/video&gt;
+
+</div>
+<p>Generally, we prefer the syntax with the &lt;source&gt;tag wrapped between the video tag because:</p>
+<ul>
+  <li>It allows you to specify multiple <source> elements for different formats of the video (e.g., MP4, WebM, Ogg), improving cross-browser compatibility.</li>
+  <li>By including the type attribute, you can tell the browser the exact MIME type of the video file, helping it determine whether it can play the file.</li>
+</ul>
+<h3>Key Attributes of the &lt;video&gt; Element</h3>
+<p>The following attributes can be used with the &lt;video&gt; tag to enhance video playback:</p>
+<div class="scroll-wrapper">
+  <table border="1" cellpadding="10" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>controls</td>
+      <td>Adds playback controls such as play, pause, volume, etc.</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>Specifies the width of the video player.</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>Specifies the height of the video player.</td>
+    </tr>
+    <tr>
+      <td>autoplay</td>
+      <td>Automatically starts playing the video when it's loaded.</td>
+    </tr>
+    <tr>
+      <td>muted</td>
+      <td>Mutes the video by default.</td>
+    </tr>
+    <tr>
+      <td>src</td>
+      <td>Specifies the video file's path.</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>Defines the format of the video (e.g., &lt;code&gt;video/mp4&lt;/code&gt;, &lt;code&gt;video/webm&lt;/code&gt;).</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h1>HTML Audio</h1>
+<p>The HTML &lt;audio&gt; element is used to play an audio file on a web page.</p>
+<h2 style="color: rgb(40, 39, 39);">The HTML &lt;audio&gt; Element</h2>
+<p>To play an audio file in HTML, use the &lt;audio&gt; element:</p>
+<textarea id="editor-audi">
+&lt;audio controls&gt;
+  &lt;source src=&quot;horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+  &lt;source src=&quot;horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+</textarea>
+<h3>Output Preview</h3>
+<iframe id="preview-audi" class="output-box" scrolling="no"></iframe>
+<h2>HTML Audio - How It Works</h2>
+<p>The controls attribute adds audio controls, like play, pause, and volume.</p>
+<p>The &lt;source&gt; element allows you to specify alternative audio files which the browser may choose from. 
+  The browser will use the first recognized format.</p>
+<p>The text between the &lt;audio&gt; and &lt;/audio&gt; tags will only be displayed in browsers that do not support the &lt;audio&gt; element.</p>
+<div class="nav-buttons">
+                   <a href="#" onclick="showContent('hyper')"><button >Previous</button></a>
+                    <a href="#" onclick="showContent('ifram')"><button >Next &gt;</button></a>
               </div>
 </div>
 <div id="lists" class="content-section">
@@ -1396,11 +1623,12 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
   each list item begins with the &lt;li&gt; tag.</p>
 <h3>Syntax:</h3>
 <div class="syntax">
-  &lt;ol&gt;
-   &lt;li&gt;Item1&lt;/li&gt;
-   &lt;li&gt;Item2&lt;/li&gt;
-   &lt;li&gt;Item3&lt;/li&gt;
+  <p>&lt;ol&gt;<br>
+   &lt;li&gt;Item1&lt;/li&gt;<br>
+   &lt;li&gt;Item2&lt;/li&gt;<br>
+   &lt;li&gt;Item3&lt;/li&gt;<br>
 &lt;/ol&gt;
+</p>
 </div>
 <h3>Attributes:</h3>
 <ul>
@@ -1416,18 +1644,17 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
 <p>The &lt;dl&gt; tag defines the description list, the &lt;dt&gt; tag defines the term name, and the &lt;dd&gt; tag describes each term.</p>
 <h3>Syntax:</h3>
 <div class="syntax">
-  &lt;dl&gt;
-    &lt;dt&gt;Item 1&lt;/dt&gt;
-    &lt;dd&gt;Description of Item 1&lt;/dd&gt;
-    &lt;dt&gt;Item 2&lt;/dt&gt;
-    &lt;dd&gt;Description of Item 2&lt;/dd&gt;
+  <p>
+  &lt;dl&gt;<br>
+    &lt;dt&gt;Item 1&lt;/dt&gt;<br>
+    &lt;dd&gt;Description of Item 1&lt;/dd&gt;<br>
+    &lt;dt&gt;Item 2&lt;/dt&gt;<br>
+    &lt;dd&gt;Description of Item 2&lt;/dd&gt;<br>
 &lt;/dl&gt;
 </div>
 <p>Here, &lt;dt&gt; (description term) is used for the term being defined, and &lt;dd&gt;(description details) is used for the description.</p>
  <div class="nav-buttons">
-                 <!-- <button>Previous</button> -->
                    <a href="#" onclick="showContent('format')"><button >Previous</button></a>
-                  <!-- <button >Next &gt;</button> -->
                     <a href="#" onclick="showContent('types')"><button >Next &gt;</button></a>
               </div>
 </div>
@@ -1571,9 +1798,7 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
             <h3>Output Preview</h3>
              <iframe id="preview-dl" class="output-box" scrolling="no"></iframe>
               <div class="nav-buttons">
-                 <!-- <button>Previous</button> -->
                    <a href="#" onclick="showContent('lists')"><button >Previous</button></a>
-                  <!-- <button >Next &gt;</button> -->
                     <a href="#" onclick="showContent('hyper')"><button >Next &gt;</button></a>
               </div>
 </div>
@@ -1662,9 +1887,7 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
     which will only display if iframes are not supported.</li>
 </ul>
  <div class="nav-buttons">
-                 <!-- <button>Previous</button> -->
                    <a href="#" onclick="showContent('vi')"><button >Previous</button></a>
-                  <!-- <button >Next &gt;</button> -->
                     <a href="#" onclick="showContent('forms')"><button >Next &gt;</button></a>
               </div>
 </div>
@@ -1709,63 +1932,64 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
 <center><img src="../images/html_form.gif"/></center>
 <h3>Form Elements</h3>
 <div class="scroll-wrapper">
-<table border="1">
-  <tr>
-    <th>Elements</th>
-    <th>Descriptions</th>
-  </tr>
-  <tr>
-    <td><label></label></td>
-    <td>Defines labels for form elements.</td>
-  </tr>
-  <tr>
-    <td><input></td>
-    <td>Takes user input like text, password, email, etc. (via type attribute).</td>
-  </tr>
-  <tr>
-    <td><button></button></td>
-    <td>Creates a clickable button to trigger actions.</td>
-  </tr>
-  <tr>
-    <td><select></select></td>
-    <td>Creates a drop-down list.</td>
-  </tr>
-  <tr>
-    <td><textarea></textarea></td>
-    <td>Collects longer blocks of text from users.</td>
-  </tr>
-  <tr>
-    <td><fieldset></fieldset></td>
-    <td>Groups related form elements and draws a visual box.</td>
-  </tr>
-  <tr>
-    <td><legend></legend></td>
-    <td>Provides a caption for a fieldset group.</td>
-  </tr>
-  <tr>
-    <td><datalist></datalist></td>
-    <td>Provides pre-defined suggestions for an input field.</td>
-  </tr>
-  <tr>
-    <td><output></output></td>
-    <td>Displays the result of a calculation or dynamic data.</td>
-  </tr>
-  <tr>
-    <td><option></option></td>
-    <td>Defines an item in a drop-down list.</td>
-  </tr>
-  <tr>
-    <td><optgroup></optgroup></td>
-    <td>Groups related options in a drop-down list.</td>
-  </tr>
+<table border="1" cellpadding="10" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Elements</th>
+      <th>Descriptions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&lt;label&gt;</td>
+      <td>It defines labels for &lt;form&gt; elements.</td>
+    </tr>
+    <tr>
+      <td>&lt;input&gt;</td>
+      <td>It is used to get input data from various types such as text, password, email, etc by changing its type.</td>
+    </tr>
+    <tr>
+      <td>&lt;button&gt;</td>
+      <td>It defines a clickable button to control other elements or execute a functionality.</td>
+    </tr>
+    <tr>
+      <td>&lt;select&gt;</td>
+      <td>It is used to create a drop-down list.</td>
+    </tr>
+    <tr>
+      <td>&lt;textarea&gt;</td>
+      <td>It is used to get input long text content.</td>
+    </tr>
+    <tr>
+      <td>&lt;fieldset&gt;</td>
+      <td>It is used to draw a box around other form elements and group the related data.</td>
+    </tr>
+    <tr>
+      <td>&lt;legend&gt;</td>
+      <td>It defines a caption for fieldset elements.</td>
+    </tr>
+    <tr>
+      <td>&lt;datalist&gt;</td>
+      <td>It is used to specify pre-defined list options for input controls.</td>
+    </tr>
+    <tr>
+      <td>&lt;output&gt;</td>
+      <td>It displays the output of performed calculations.</td>
+    </tr>
+    <tr>
+      <td>&lt;option&gt;</td>
+      <td>It is used to define options in a drop-down list.</td>
+    </tr>
+    <tr>
+      <td>&lt;optgroup&gt;</td>
+      <td>It is used to define group-related options in a drop-down list.</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 <div class="nav-buttons">
-                 <!-- <button>Previous</button> -->
-                   <a href="#" onclick="showContent('ifram')"><button >Previous</button></a>
-                  <!-- <button >Next &gt;</button> -->
-                    <!-- <a href="#" onclick="showContent('editors')"><button >Next &gt;</button></a> -->
-              </div>
+ <a href="#" onclick="showContent('ifram')"><button >Previous</button></a>
+  </div>
 </div>
 </div>
 </div>
@@ -1776,11 +2000,9 @@ JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
   function Open() {
     document.getElementsByClassName("sidebar")[0].classList.add("active");
   }
-
   function Close() {
     document.getElementsByClassName("sidebar")[0].classList.remove("active");
-    // document.getElementsByClassName("cross")[0].classList.remove("active");
   }
 </script>
-    </body>
+</body>
 </html>
