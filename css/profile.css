@@ -573,7 +573,7 @@ header {
 }
 
 .coins h1{
-    font-size: 55px;
+    font-size: 20px;
     color: #00f2fe;
     margin-left: 35px;
 }
@@ -787,11 +787,42 @@ footer {
     }
 }
 
-
-/* Tablets (width ≤ 1024px) */
 @media (max-width: 1024px) {
     .rectangle {
         width: 220px;
+        height: 100%;
+    }
+
+    .card{
+        height: 200px;
+        font-size: 30px;
+        }
+    .dashboard{
+        height: 230px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .account{
+        height: 700px;
+
+    }
+    .community{
+        height: 300px;
+        gap: 40px;
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+    }
+    .courses-path{
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
     }
 
     .right-side h1 {
@@ -800,7 +831,6 @@ footer {
     }
 
     .profile-photo {
-        left: 200px;
         bottom: 60px;
         width: 90px;
         height: 90px;
@@ -870,7 +900,6 @@ footer {
 
 
 
-
 /* Mobile phones (width ≤ 480px) */
 @media (max-width: 480px) {
     header {
@@ -915,6 +944,10 @@ footer {
         display: flex;
         flex-direction: column;
     }
+
+    .card h3{
+        font-size: 22px;
+    }
     .profile-photo{
         display: flex;
         align-items: center;
@@ -923,6 +956,14 @@ footer {
     .header{
         display: flex;
         flex-direction: row;
+    }
+    .account{
+        display: flex;
+        gap: 15px;
+        height: 450px;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 30px
     }
 
     .logo{
@@ -937,9 +978,12 @@ footer {
         position: sticky;
         top: 85px;
         height: calc(100vh - 85px);
+        /* height: 100svh; */
         overflow-y: auto;
+
         scrollbar-width: thin;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -968,5 +1012,73 @@ footer {
     .profile-photo img {
         width: 80px;
         height: 80px;
+    }
+}
+
+@media (max-width: 426px) {
+    .account{
+        height: 190px;
+    }
+    .profile-photo{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 769px) {
+    .account {
+        height: 190px;
+    }
+
+    .profile-photo {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Make layout responsive */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        max-width: 500px;
+        padding: 10px;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-section h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .coins {
+        justify-content: center;
+    }
+
+    .rectangle {
+        position: relative;
+        height: auto;
+        max-height: none;
+    }
+
+    .bottom-profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .coin-count {
+        font-size: 1.2rem;
     }
 }
