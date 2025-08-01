@@ -57,7 +57,7 @@
       coinsDisplay.textContent = coins;
 
       if (coins < 10) {
-        // submitBtn.disabled = true;
+        submitBtn.disabled = true;
         window.location.href = '../html/funzone.html';
       }
     });
