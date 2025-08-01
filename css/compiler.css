@@ -8,8 +8,6 @@ body {
   background: #0f172a;
   color: #ffffff;
 }
-
-/* Section styling */
 .compiler-section {
   padding: 80px 20px;
   text-align: center;
@@ -55,7 +53,6 @@ body {
 
 .compiler-card h3 {
   font-size: 1.5rem;
-  /* font-weight: 700; */
   margin-bottom: 15px;
 }
 
