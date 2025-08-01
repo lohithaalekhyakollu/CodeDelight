@@ -18,6 +18,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nothing+You+Could+Do&family=Playwrite+AU+QLD:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <!-- <script src="DSA-levels.js"></script> -->
 </head>
 
 <body>
@@ -27,10 +28,10 @@
         </div>
         
         <nav class="nav_bar">
-            <a href="Home.html" onclick="navigate('Home.html')">Home</a>
-            <a href="Courses.html">Courses</a>
-            <a href="#">Compilers</a>
-            <a href="#">Fun Zone</a>
+            <a href="../html/index.html" onclick="navigate('Home.html')">Home</a>
+            <a href="../html/courses.html">Courses</a>
+            <a href="../html/compilers.html">Compilers</a>
+            <a href="../html/funzone.html">Fun Zone</a>
         </nav>
         <div class="action_bar">
             
@@ -39,7 +40,7 @@
                 <!-- <span class="action_name">Sign In / Sign Up</span> -->
             <!-- </div> -->
              <div class="user-name">
-            <i class="fa-solid fa-circle-user fa-xl" style="color: white;"></i> Ashrita
+                <i class="fa-solid fa-circle-user fa-xl" style="color: white;"></i> Lakshan
              </div>
         </div>
         <div class="menu_toggle">
@@ -51,18 +52,10 @@
                     <div>Compilers</div>
                     <div>Fun Zone</div> -->
 
-                    <a href="Home.html">
-                        <div>Home</div>
-                    </a>
-                    <a href="courses.html">
-                        <div>Courses</div>
-                    </a>
-                    <a href="compilers.html">
-                        <div>Compilers</div>
-                    </a>
-                    <a href="funzone.html">
-                        <div>Fun Zone</div>
-                    </a>
+                    <a href="../html/index.html" onclick="navigate('Home.html')">Home</a>
+                    <a href="../html/courses.html">Courses</a>
+                    <a href="../html/compilers.html">Compilers</a>
+                    <a href="../html/funzone.html">Fun Zone</a>
 
                 </div>
             </div>
@@ -78,7 +71,7 @@
             <div class="rectangle">
                 <div class="card">
                     <div class="user"><img src="../images/user.png" class="user" /></div>
-                    <h3>Ashrita Gogula</h3>
+                    <h3>Lakshan</h3>
                 </div>
     
                 <div class="dashboard">
@@ -126,7 +119,6 @@
                 </div>
 
                 <!-- <div class="box"></div> -->
-                
 
                 <div class="dashboard1">
                     <div class="dash-card">
@@ -149,16 +141,14 @@
 
                 <div class="achievements">
 
-                    <span>Achievements<span>
+                    <span>Achievements</span>
                     <div class="badges-container">
                             <img src="../images/Html_certified.png" class="html-badge"/>
                             <img src="../images/Badge-certified.png" class="html-badge"/>
                             <img src="../images/Badge-certified.png" class="html-badge" />
                             <img src="../images/Badge-certified.png" class="html-badge" />
-                            <img src="../images/Badge-certified.png" class="html-badge" />
-                        
-                    </div>
-                    
+                            <img src="../images/Badge-certified.png" class="html-badge" />            
+                    </div>                
                 </div>
 
                 <div class="inside-container">
@@ -198,19 +188,11 @@
                     <span>Fun Zone</span>
                     <p>Take a break and try our <a href="funzone.html">JS Mini Game 🎮</a></p>
                 </div>
-
-
-
-
-                
-
-
             </div>
 
             <div class="extra-block">
                 <div class="extra-heading">
-                    
-                    <p><h1>Bio</h1><br>I’m Ashrita Gogula, a passionate and self-taught web developer.
+                    <p><h1>Bio</h1><br>I’m Lakshan, a passionate and self-taught web developer.
                     I enjoy creating beautiful websites and exploring new technologies.
                     Apart from coding, I love drawing and expressing creativity through design.</p>
                 </div>
@@ -297,16 +279,14 @@
                 <h4>Quick Links</h4>
                 <span style="display: flex;flex-direction: row
             ; gap: 1rem;">
-                    <a href="#">Home</a>
-                    <a href="#">Courses</a>
-                    <a href="#">Compilers</a>
-                    <a href="#">Funzone</a>
-                    <a href="#">Profile</a>
+                    <a href="../html/index.html" onclick="navigate('Home.html')">Home</a>
+                    <a href="../html/courses.html">Courses</a>
+                    <a href="../html/compilers.html">Compilers</a>
+                    <a href="../html/funzone.html">Fun Zone</a>
                 </span>
                 <div style="margin-top: 1rem;">
                     <h4>Follow Us</h4>
                     <div>
-                        style="display: flex; gap: 1rem; margin-top: 0.5rem; align-content: center; justify-content: center;">
                         <a href="https://facebook.com" target="_blank" aria-label="Facebook" style="color: #ccc;">
                             <i class="fab fa-facebook fa-lg"></i>
                         </a>
@@ -329,18 +309,6 @@
             &copy; 2025 Code Delight. All rights reserved.
         </div>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const coinDisplay = document.getElementById("coin-count");
-
-            // Use the correct key, either "coins" or "totalCoins"
-            const coins = localStorage.getItem("coins") || localStorage.getItem("totalCoins") || 0;
-
-            coinDisplay.textContent = coins;
-        });
-    </script>
-
     
 </body>
 </html>
