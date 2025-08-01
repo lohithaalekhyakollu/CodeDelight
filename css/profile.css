@@ -29,12 +29,10 @@ header {
 }
 
 .logo {
-    height: 75px;
-    position: relative;
-    top: 10px;
-    transform: scale(1.9);
-    filter: drop-shadow(0 0 6px rgba(0, 242, 254, 0.2));
-    transition: transform 0.3s ease;
+    /* height: 75px; */
+    height: 65px;
+        filter: drop-shadow(0 0 6px rgba(0, 242, 254, 0.2));
+        transition: transform 0.3s ease;
 }
 
 
@@ -438,9 +436,6 @@ header {
     top: -34px;
 }
 
-
-
-
 .dash-card {
     background: linear-gradient(135deg, #1f4068);
     color: white;
@@ -503,7 +498,6 @@ header {
     border-bottom: 1px solid #00f2fe;
 
 }
-
 
 .html-badge{
     width: 130px
@@ -744,7 +738,11 @@ footer {
     line-height: 1.6;
     transition: color 0.3s ease;
 }
-
+.linking{
+    /* border: 3px solid white; */
+    display: flex;
+    gap: 30px;
+}
 .footer-section a:hover {
     color: #00f2fe;
 }
