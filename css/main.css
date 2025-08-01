@@ -197,7 +197,7 @@
   letter-spacing: 2px;
 }
 .reviews-viewport {
-/*   overflow: hidden; */
+  overflow: hidden;
   width: 100%;
   position: relative;
 }
