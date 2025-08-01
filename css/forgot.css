@@ -6,8 +6,6 @@
 
 body {
   height: 100vh;
-  /* background: linear-gradient(135deg, #1f4068, #132743); */
-  /* background-image: linear-gradient(rgba(0,128,128,0.7), #102944); */
   background-color:rgba(31, 64, 104,0.9);
   display: flex;
   justify-content: center;
