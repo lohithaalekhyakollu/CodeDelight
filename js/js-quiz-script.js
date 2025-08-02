@@ -50,7 +50,7 @@ function showResult() {
   let starsEarned = 0;
   if (score >= 18) starsEarned = 3;
   else if (score >= 14) starsEarned = 2;
-  else if (score >= 0) starsEarned = 1;
+  else if (score >= 7) starsEarned = 1;
 
   if (starsEarned > 0) {
     let starsHtml = '<div class="stars">';
