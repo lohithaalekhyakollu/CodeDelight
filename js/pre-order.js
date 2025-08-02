@@ -49,9 +49,15 @@
         coins -= 5;
         alert("✅ Correct! You won. 5 coins deducted as game cost.");
          localStorage.setItem("rewardCoins", "5");
+       setTimeout(() => {
+      window.location.href = "../html/funzone.html"; 
+    }, 100);
       } else {
         coins -= 10;
         alert("❌ Incorrect! You lost. 10 coins deducted.");
+       setTimeout(() => {
+      window.location.href = "../html/funzone.html"; 
+    }, 100);
       }
 
       coinsDisplay.textContent = coins;
