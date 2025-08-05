@@ -23,12 +23,10 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: background 0.4s ease;
 }
 .logo {
   height: 65px;
   filter: drop-shadow(0 0 6px rgba(0, 242, 254, 0.2));
-  transition: transform 0.3s ease;
 }
 .nav_bar {
   display: flex;
@@ -187,6 +185,19 @@ header {
     color: #00f2fe;
   }
 }
+ @keyframes fadeSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .right img {
+    max-width: 90vw;
+  }
 footer {
   background: linear-gradient(135deg, #132743, #1f4068); 
   padding: 60px 20px 30px;
