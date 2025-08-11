@@ -538,3 +538,16 @@
     align-self: center;
   }
 }
+  @keyframes fadeSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .right img {
+    max-width: 90vw;
+  }
