@@ -5,41 +5,48 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: auto;
+  overflow: auto;
+}
+
 body {
   background: #454545;
-  color: #00f2fe;;
-  height: 100vh;
-  overflow: hidden;
+  color: #00f2fe;
 }
+
 
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   padding: 10px;
   gap: 10px;
 }
 
-/* === Top Editors Section === */
+
 .top-editors {
   display: flex;
   gap: 10px;
-  height: 50%; /* Editors take top half */
+  flex-wrap: wrap;
 }
 
 .left {
   display: flex;
   flex: 1;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
+
 .editor {
-  flex: 1;
+  flex: 1 1 30%;
   display: flex;
   flex-direction: column;
   background: #1f1f1f;
   border-radius: 6px;
   overflow: hidden;
+  min-height: 400px;
 }
 
 label {
@@ -68,56 +75,55 @@ textarea {
   overflow: auto;
 }
 
-/* === Output Section === */
+
 .right {
-  flex: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 6px;
   overflow: hidden;
   background: white;
+  min-height: 300px;
 }
 
 .right label {
   background: #000;
-  color: #00f2fe;;
+  color: #00f2fe;
   font-weight: 500;
   padding: 8px 12px;
   font-size: 15px;
 }
 
 iframe {
-  flex: 1;
   width: 100%;
+  min-height: 100vh;
+  height: auto;
   border: none;
   background: #fff;
-  overflow: auto; /* allow scroll inside iframe */
 }
 
-/* === Responsive Styling === */
+
 @media (max-width: 1024px) {
   .top-editors {
     flex-direction: column;
-    height: auto;
   }
 
   .left {
     flex-direction: column;
-    gap: 10px;
   }
 
   .editor {
-    height: 150px;
+    min-height: 220px;
   }
 
   .right {
-    height: calc(100vh - 510px); /* Adjust based on editor stack */
+    min-height: 300px;
   }
 }
 
 @media (max-width: 600px) {
   .editor {
-    height: 140px;
+    min-height: 200px;
   }
 
   textarea {
@@ -125,6 +131,6 @@ iframe {
   }
 
   .right {
-    height: calc(100vh - 460px);
+    min-height: 280px;
   }
 }
